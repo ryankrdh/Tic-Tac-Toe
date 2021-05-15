@@ -1,6 +1,6 @@
 # Milestone Project - 1 Tic-Tac-Toe
 
-This is a game called Tic-Tac-Toe built with Python.
+This is a game called Tic-Tac-Toe built with Python using Pycharm.
 
 ## What was your motivation?
 
