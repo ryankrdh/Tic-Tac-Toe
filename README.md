@@ -4,11 +4,11 @@ This is a game called Tic-Tac-Toe built with Python using Pycharm.
 
 ## What was your motivation?
 
-My motivation was to improve my python knowledge.
+My motivation was to improve my python knowledge. Also to practice and improve debugging skils.
 
 ## Why did you build this project?
 
-To apply what I know and practice python syntax.
+To apply what I know and practice python syntax. 
 
 ## How to use
 
