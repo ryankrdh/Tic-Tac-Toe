@@ -21,6 +21,8 @@ def player_input():
     marker = ''
 
     while marker != 'X' and marker != 'O':
+    # For some reason the following syntax won't provide the user input in pycharm
+    # while not (marker == 'X' or marker == 'O'):
         marker = input('Player 1: Do you want to be X or O? ').upper()
 
     if marker == 'X':
