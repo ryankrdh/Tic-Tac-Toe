@@ -1,6 +1,4 @@
 
-
-
 def display_board(board):
     print('     |     |')
     print('  ' + board[7] + '  |  ' + board[8] + '  |  ' + board[9])
@@ -14,19 +12,20 @@ def display_board(board):
     print('  ' + board[1] + '  |  ' + board[2] + '  |  ' + board[3])
     print('     |     |')
 
+
 test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 display_board(test_board)
-print('hi')
+
 
 def player_input():
     marker = ''
 
-    while not (marker == 'X' or 'O'):
+    while marker != 'X' and marker != 'O':
         marker = input('Player 1: Do you want to be X or O? ').upper()
 
     if marker == 'X':
-        return ('X', 'O')
+        return 'X', 'O'
     else:
-        return ('O', 'X')
+        return 'O', 'X'
 
-
+print(player_input())
