@@ -1,3 +1,5 @@
+import random
+
 # DISPLAYING THE BOARD
 def display_board(board):
     print('     |     |')
@@ -62,3 +64,51 @@ def win_check(board, mark):
 # CHECKING FOR WINNING PLAYER
 display_board(test_board)
 print(win_check(test_board, 'X'))
+
+
+# FUNCTION THAT DETERMINES WHICH PLAYER GOES FIRST
+def choose_first():
+
+    flip = random.randint(0, 1)
+
+    if flip == 0:
+        return 'Player 1'
+    else:
+        return 'Player 2'
+
+
+# CHECK TO SEE IF SPACE IS AVAILABLE
+def space_check(board, position):
+    return board[position] == ' '
+
+
+# CHECK TO SEE IF BOARD IS FULL
+def full_board_check(board):
+    for i in range(1, 10):
+        if space_check(board, 1):
+            return False
+    return True
+
+# IF THE SPACE IS FREE, INPUT MARKER
+def player_choice(board):
+    position = 0
+
+    while position not in range(1, 10) or not space_check(board, position):
+        position = int(input('Choose a position: (1-9) '))
+
+    return position
+
+
+# ASKING THE PLAYER IF THEY WANT TO PLAY AGAIN
+def replay():
+    choice = ''
+
+    while choice != 'YES' and choice != 'NO':
+        choice = input('Play again? Enter YES or NO').upper()
+
+    return choice == 'YES'
+
+
+replay()
+
+
