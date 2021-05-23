@@ -30,9 +30,9 @@ def player_input():
         marker = input('Player 1: Do you want to be X or O? ').upper()
 
     if marker == 'X':
-        return 'X', 'O'
+        return ('X', 'O')
     else:
-        return 'O', 'X'
+        return ('O', 'X')
 
 
 print(player_input())
@@ -111,4 +111,48 @@ def replay():
 
 replay()
 
+
+print('Welcome to Tic Tac Toe!')
+
+while True:
+
+    # PLAY THE GAME
+
+    # SET EVERYTHING UP (BOARD, WHOS FIRST CHOOSE MARKERS)
+    the_board = [' '] * 10
+    player1_marker, player2_marker = player_input()
+
+    turn = choose_first()
+    print(turn + ' will go first')
+
+    play_game = input('Ready to play? yes or no?').lower()
+
+    if play_game == 'yes':
+        game_on = True
+    else:
+        game_on = False
+
+    ## GAMEPLAY
+    while game_on:
+
+        ### PLAYER ONE TURN
+        if turn == 'Player':
+            # Show the board
+            display_board(the_board)
+
+            # Choose a position
+
+            # Place the marker on the position
+
+            # Check if they won
+
+            # Or check if there is a tie
+
+            # No tie and no Win? then next player's turn
+
+    ### PLAYER TWO TURN
+
+    # BREAK OUT OF THE WHILE LOOP ON replay()
+    if not replay():
+        break
 
