@@ -4,15 +4,21 @@ This is a game called Tic-Tac-Toe built with Python using Pycharm.
 
 ## What was your motivation?
 
-My motivation was to improve my python knowledge. Also to practice and improve debugging skils.
+My motivation was to improve my python knowledge. Also to practice and improve debugging skills.
 
 ## Why did you build this project?
 
-To apply what I know and practice python syntax. 
+To apply what I know and practice python syntax and to understand MINIMAX. 
 
 ## How to use
 
-Input numbers from 1-9 in order to play the game. The numbers or ordered same as the num key on the right side of your keyboard.
+Input numbers from 1-9 in order to play the game. The numbers from the top to bottom as follows:
+
+1, 2, 3
+4, 5, 6
+7, 8, 9
+
+You can either play with two players or against a bot.
 
 ## Getting Started
 
