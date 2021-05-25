@@ -3,42 +3,42 @@ import random
 
 # DISPLAYING THE BOARD
 def display_board(board):
-    print("     |     |")
-    print("  " + board[1] + "  |  " + board[2] + "  |  " + board[3])
-    print("     |     |")
-    print("-----------------")
-    print("     |     |")
-    print("  " + board[4] + "  |  " + board[5] + "  |  " + board[6])
-    print("     |     |")
-    print("-----------------")
-    print("     |     |")
-    print("  " + board[7] + "  |  " + board[8] + "  |  " + board[9])
-    print("     |     |")
+    print('     |     |')
+    print('  ' + board[1] + '  |  ' + board[2] + '  |  ' + board[3])
+    print('     |     |')
+    print('-----------------')
+    print('     |     |')
+    print('  ' + board[4] + '  |  ' + board[5] + '  |  ' + board[6])
+    print('     |     |')
+    print('-----------------')
+    print('     |     |')
+    print('  ' + board[7] + '  |  ' + board[8] + '  |  ' + board[9])
+    print('     |     |')
 
 
 # THIS BOARD IS USED FOR POSITIONING
-the_board = {1: " ", 2: " ", 3: " ",
-         4: " ", 5: " ", 6: " ",
-         7: " ", 8: " ", 9: " "}
+the_board = {1: ' ', 2: ' ', 3: ' ',
+         4: ' ', 5: ' ', 6: ' ',
+         7: ' ', 8: ' ', 9: ' '}
 
 
 # THIS FUNCTION CHECKS TO SEE IF A PLAYER WON THE GAME
 def check_if_won():
-    if the_board[1] == the_board[2] and the_board[1] == the_board[3] and the_board[1] != " ":
+    if the_board[1] == the_board[2] and the_board[1] == the_board[3] and the_board[1] != ' ':
         return True
-    elif the_board[4] == the_board[5] and the_board[4] == the_board[6] and the_board[4] != " ":
+    elif the_board[4] == the_board[5] and the_board[4] == the_board[6] and the_board[4] != ' ':
         return True
-    elif the_board[7] == the_board[8] and the_board[7] == the_board[9] and the_board[7] != " ":
+    elif the_board[7] == the_board[8] and the_board[7] == the_board[9] and the_board[7] != ' ':
         return True
-    elif the_board[1] == the_board[4] and the_board[1] == the_board[7] and the_board[1] != " ":
+    elif the_board[1] == the_board[4] and the_board[1] == the_board[7] and the_board[1] != ' ':
         return True
-    elif the_board[2] == the_board[5] and the_board[2] == the_board[8] and the_board[2] != " ":
+    elif the_board[2] == the_board[5] and the_board[2] == the_board[8] and the_board[2] != ' ':
         return True
-    elif the_board[3] == the_board[6] and the_board[3] == the_board[9] and the_board[3] != " ":
+    elif the_board[3] == the_board[6] and the_board[3] == the_board[9] and the_board[3] != ' ':
         return True
-    elif the_board[1] == the_board[5] and the_board[1] == the_board[9] and the_board[1] != " ":
+    elif the_board[1] == the_board[5] and the_board[1] == the_board[9] and the_board[1] != ' ':
         return True
-    elif the_board[7] == the_board[5] and the_board[7] == the_board[3] and the_board[7] != " ":
+    elif the_board[7] == the_board[5] and the_board[7] == the_board[3] and the_board[7] != ' ':
         return True
     else:
         return False
@@ -56,27 +56,27 @@ def check_which_mark(mark):
             (the_board[9] == mark and the_board[5] == mark and the_board[1] == mark))  # DIAGONAL
 
 
-# PLAYER GETS TO DECIDE THE MARKER "O" OR "X"
+# PLAYER GETS TO DECIDE THE MARKER 'O' OR 'X'
 def player_input():
-    marker = ""
+    marker = ''
 
-    # For some reason the following syntax won"t provide the user input in pycharm
-    # while not (marker == "X" or marker == "O"):
-    while marker != "X" and marker != "O":
+    # For some reason the following syntax won't provide the user input in pycharm
+    # while not (marker == 'X' or marker == 'O'):
+    while marker != 'X' and marker != 'O':
         marker = input("Player 1: Do you want to be X or O?").upper()
-    if marker == "X":
-        return "X", "O"
+    if marker == 'X':
+        return 'X', 'O'
     else:
-        return "O", "X"
+        return 'O', 'X'
 
 
 # PERMISSION TO HAVE BOT TAKE CONTROL OF PLAYER 2
 def bot_input():
     enable_player_bot = False
 
-    while enable_player_bot != "yes" and enable_player_bot != "no":
+    while enable_player_bot != 'yes' and enable_player_bot != 'no':
         enable_player_bot = input("Would you like to play with a CPU? yes or no").lower()
-        if enable_player_bot == "yes":
+        if enable_player_bot == 'yes':
             print(" ** Player 2 will now be a BOT **.")
             return True
         else:
@@ -89,14 +89,14 @@ def first_round():
     coin_toss = random.randint(0, 1)
 
     if coin_toss == 0:
-        return "Player 1"
+        return 'Player 1'
     else:
-        return "Player 2"
+        return 'Player 2'
 
 
 # CHECK TO SEE IF THE POSITION ALREADY HAS A MARK
 def space_check(position):
-    if the_board[position] == " ":
+    if the_board[position] == ' ':
         return True
     else:
         return False
@@ -131,20 +131,20 @@ def player_position_choice(letter, position):
 # CHECKS TO SEE IF THERE IS A DRAW
 def check_if_draw():
     for key in the_board.keys():
-        if the_board[key] == " ":
+        if the_board[key] == ' ':
             return False
     return True
 
 
 # ASKING THE PLAYER IF THEY WANT TO PLAY AGAIN
 def replay():
-    choice = ""
+    choice = ''
 
-    while choice != "yes" and choice != "no":
+    while choice != 'yes' and choice != 'no':
         choice = input("Play again? Enter YES or NO").lower()
 
         print("\n" * 3)
-    return choice == "YES"
+    return choice == 'YES'
 
 
 # ASKING PLAYER ONE TO MOVE
@@ -174,10 +174,10 @@ def player_two_bot():
     high_score = -800
     best_position = 0
     for key in the_board.keys():
-        if the_board[key] == " ":
+        if the_board[key] == ' ':
             the_board[key] = player2_marker
             score = minimax(the_board, 0, False)
-            the_board[key] = " "
+            the_board[key] = ' '
             if score > high_score:
                 high_score = score
                 best_position = key
@@ -199,10 +199,10 @@ def minimax(board, depth, maximizing):
     if maximizing:
         high_score = -800
         for key in the_board.keys():
-            if the_board[key] == " ":
+            if the_board[key] == ' ':
                 the_board[key] = player2_marker
                 score = minimax(board, depth + 1, False)
-                the_board[key] = " "
+                the_board[key] = ' '
                 if score > high_score:
                     high_score = score
         return high_score
@@ -210,10 +210,10 @@ def minimax(board, depth, maximizing):
     else:
         high_score = 800
         for key in the_board.keys():
-            if the_board[key] == " ":
+            if the_board[key] == ' ':
                 the_board[key] = player1_marker
                 score = minimax(board, depth + 1, True)
-                the_board[key] = " "
+                the_board[key] = ' '
                 if score < high_score:
                     high_score = score
         return high_score
@@ -221,17 +221,17 @@ def minimax(board, depth, maximizing):
 
 # GAME INSTRUCTIONS
 print("The board positions go from 1-9 from the top:")
-print("     |     |")
-print("  1  |  2  |  3")
-print("     |     |")
-print("-----------------")
-print("     |     |")
-print("  4  |  5  |  6")
-print("     |     |")
-print("-----------------")
-print("     |     |")
-print("  7  |  8  |  9")
-print("     |     |")
+print('     |     |')
+print('  1  |  2  |  3')
+print('     |     |')
+print('-----------------')
+print('     |     |')
+print('  4  |  5  |  6')
+print('     |     |')
+print('-----------------')
+print('     |     |')
+print('  7  |  8  |  9')
+print('     |     |')
 print("\n")
 
 
@@ -246,7 +246,7 @@ bot = bot_input()
 # STARTS THE GAME
 while not check_if_won():
     while bot:
-        if turn == "Player 1":
+        if turn == 'Player 1':
             print("Player 1 TURN")
             player_one_move()
             print("Player 2 TURN")
@@ -256,7 +256,7 @@ while not check_if_won():
             player_two_bot()
             print("Player 1 TURN")
             player_one_move()
-    if turn == "Player 1":
+    if turn == 'Player 1':
         print("Player 1 TURN")
         player_one_move()
         print("Player 2 TURN")
