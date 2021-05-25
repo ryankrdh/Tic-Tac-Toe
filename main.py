@@ -171,7 +171,7 @@ def player_two_move():
 
 # MINIMAX AI BOT FOR PLAYER TWO
 def player_two_bot():
-    high_score = -800
+    high_score = -100
     best_position = 0
     for key in the_board.keys():
         if the_board[key] == ' ':
@@ -197,7 +197,7 @@ def minimax(board, depth, maximizing):
         return 0
 
     if maximizing:
-        high_score = -800
+        high_score = -100
         for key in the_board.keys():
             if the_board[key] == ' ':
                 the_board[key] = player2_marker
@@ -208,7 +208,7 @@ def minimax(board, depth, maximizing):
         return high_score
 
     else:
-        high_score = 800
+        high_score = 100
         for key in the_board.keys():
             if the_board[key] == ' ':
                 the_board[key] = player1_marker
