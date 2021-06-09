@@ -169,13 +169,15 @@ def player_two_move():
     return
 
 
-# MINIMAX AI BOT FOR PLAYER TWO
+# Player Two(AI) = +1 and Player One = -1. AI is maximizing and player is minimizing.
+# Call minimax on each board positions, and loop through all possible moves.
+
 def player_two_bot():
-    high_score = -100
+    high_score = -100 # cpu will try to aim for this score.
     best_position = 0
     for key in the_board.keys():
-        if the_board[key] == ' ':
-            the_board[key] = player2_marker
+        if the_board[key] == ' ': # Is spot available?
+            the_board[key] = player2_marker # Try to place the mark there.
             score = minimax(the_board, 0, False)
             the_board[key] = ' '
             if score > high_score:
@@ -188,6 +190,7 @@ def player_two_bot():
 
 
 # MINIMAX AI BOT FOR PLAYER TWO
+# Plays by itself to see bext maximum score for player two.
 def minimax(board, depth, maximizing):
     if check_which_mark(player2_marker):
         return 1
@@ -201,9 +204,10 @@ def minimax(board, depth, maximizing):
         for key in the_board.keys():
             if the_board[key] == ' ':
                 the_board[key] = player2_marker
-                score = minimax(board, depth + 1, False)
+                score = minimax(board, depth + 1, False) # Goes to next player since maximizing is False.
                 the_board[key] = ' '
-                if score > high_score:
+                # score = max(score, high_score);
+                if score > high_score: # Finds the best score of the next turn by the AI player. 
                     high_score = score
         return high_score
 
@@ -214,7 +218,8 @@ def minimax(board, depth, maximizing):
                 the_board[key] = player1_marker
                 score = minimax(board, depth + 1, True)
                 the_board[key] = ' '
-                if score < high_score:
+                # score = min(score, high_score);
+                if score < high_score: # Finds the best score of the next turn for the Non-AI player
                     high_score = score
         return high_score
 
