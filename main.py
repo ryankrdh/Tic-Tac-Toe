@@ -191,7 +191,8 @@ def player_two_bot():
 
 # MINIMAX AI BOT FOR PLAYER TWO
 # Plays by itself to see bext maximum score for player two.
-def minimax(board, depth, maximizing):
+# Minimax also keeps track of the depth of the tree so it knows how long it takes to get to the end.
+def minimax(board, depth, maximizing): 
     if check_which_mark(player2_marker):
         return 1
     elif check_which_mark(player1_marker):
@@ -206,7 +207,7 @@ def minimax(board, depth, maximizing):
                 the_board[key] = player2_marker
                 score = minimax(board, depth + 1, False) # Goes to next player since maximizing is False.
                 the_board[key] = ' '
-                # score = max(score, high_score);
+                # high_score = max(score, high_score);
                 if score > high_score: # Finds the best score of the next turn by the AI player. 
                     high_score = score
         return high_score
@@ -218,7 +219,7 @@ def minimax(board, depth, maximizing):
                 the_board[key] = player1_marker
                 score = minimax(board, depth + 1, True)
                 the_board[key] = ' '
-                # score = min(score, high_score);
+                # high_score = min(score, high_score);
                 if score < high_score: # Finds the best score of the next turn for the Non-AI player
                     high_score = score
         return high_score
