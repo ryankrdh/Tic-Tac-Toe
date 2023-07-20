@@ -9,11 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet"> 
+    
 </head>
 <body>
     <div class="container">
         <h1 id="playerText">Tic Tac Toe</h1>
-        <button id="restartBtn">Restart Game</button>
+        <button id="restartBtn" onclick="restartGame()">
+            <img src="assets/dogs-bone-restart.png" alt="Restart Game" style= "width: 300px; height: 150px">
+        </button>
+          
 
         <div id="gameboard">
             <div class="box" id="0"></div>
@@ -27,6 +31,8 @@
             <div class="box" id="8"></div>
         </div>
     </div>
+    <!-- Add the image element for the AI player -->
+    <!-- <img id="aiImage" src="assets/boba.png" alt="AI Player" style="display: none;"> -->
     
     <script src="/app.js"></script>
 </body>
