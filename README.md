@@ -7,15 +7,15 @@ Click ⬇ to START!</br>
 
 ## Key Features
 
-- ** Minimax algorithm for AI **
+- **Minimax algorithm for AI**
 
 ---
 
-- ** Intermediate Javascript Knowledge **
+- **Intermediate Javascript Knowledge**
 
 ---
 
-- ** Intermediate Python Knowledge **
+- **Intermediate Python Knowledge**
 
 ## How to use
 
