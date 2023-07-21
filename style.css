@@ -6,7 +6,7 @@
 
 :root {
   sky: #80e0f4;
-  winning-blocks: #80e0f4;
+  winning-blocks: #1feff6;
 }
 
 body {
@@ -17,6 +17,11 @@ h1 {
   font-size: 60px;
   text-transform: uppercase;
   color: rgb(36, 76, 185);
+}
+
+/* Add the CSS to style the line */
+#winningLine {
+  display: none; /* Initially hide the SVG container */
 }
 
 .container {

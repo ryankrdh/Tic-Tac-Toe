@@ -1,46 +1,36 @@
-# Milestone Project - 1 Tic-Tac-Toe
+# TIC TAC TOE
 
-This is a game called Tic-Tac-Toe built with Python using Pycharm.
+### Welcome to my game Tic Tac Toe!
 
-## What was your motivation?
+Click ⬇ to START!</br>
+<a href="https://melo-boba-toe.surge.sh/"><img src="assets/melo-boba-toe-sample.png" width="100" height="100"></a>
 
-My motivation was to improve my python knowledge. Also to practice and improve debugging skills.
+## Key Features
 
-## Why did you build this project?
+- ** Minimax algorithm for AI **
 
-To apply what I know and practice python syntax and to understand MINIMAX. 
+---
+
+- ** Intermediate Javascript Knowledge **
+
+---
+
+- ** Intermediate Python Knowledge **
 
 ## How to use
 
-Input numbers from 1-9 in order to play the game. The numbers from the top to bottom as follows:
+1. Click on the icon at the top to play the game.
 
-1, 2, 3
-4, 5, 6
-7, 8, 9
-
-You can either play with two players or against a bot.
-
-## Getting Started
-
-Download file and run in pycharm.
-
-## Deployment
-
-Will work on deploying it on a server in the future.
+2. You will be playing against an AI.
 
 ## Built With
 
-* [Pycharm]
-
-## Versioning
-
-Python version 3
+Javascript, Html, SCC.
 
 ## Authors
 
-* **Ryan Kim** - *Initial work* - [Ryankrdh](https://github.com/ryankrdh)
+**Ryan Kim** - [Ryankrdh](https://github.com/ryankrdh)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+This project is licensed under the MIT License. Feel free to use and modify it according to your needs.

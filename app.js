@@ -138,21 +138,70 @@ function getWinningCombination(player) {
   );
 }
 
+// function highlightWinningCombination(winningCombination) {
+//   const [a, b, c] = winningCombination[0];
+//   [a, b, c].forEach(
+//     (index) => (boxes[index].style.backgroundColor = winnerIndicator)
+//   );
+// }
+
+// ... Your existing JavaScript code ...
+
 function highlightWinningCombination(winningCombination) {
   const [a, b, c] = winningCombination[0];
-  [a, b, c].forEach(
-    (index) => (boxes[index].style.backgroundColor = winnerIndicator)
-  );
+  const startBox = boxes[a];
+  const endBox = boxes[c];
+  createLine(startBox, endBox);
 }
+
+function createLine(startBox, endBox) {
+  const svg = document.getElementById('winningLine');
+  const line = svg.querySelector('line');
+
+  // Calculate the start and end coordinates of the line
+  const startRect = startBox.getBoundingClientRect();
+  const endRect = endBox.getBoundingClientRect();
+  const startX = startRect.left + startRect.width / 2;
+  const startY = startRect.top + startRect.height / 2;
+  const endX = endRect.left + endRect.width / 2;
+  const endY = endRect.top + endRect.height / 2;
+
+  // Update the line's attributes to position and draw it correctly
+  line.setAttribute('x1', startX);
+  line.setAttribute('y1', startY);
+  line.setAttribute('x2', endX);
+  line.setAttribute('y2', endY);
+
+  // Make the SVG visible
+  svg.style.display = 'block';
+}
+
+// restartBtn.addEventListener('click', () => {
+//   spaces.fill(null);
+//   boxes.forEach((box) => {
+//     box.innerText = '';
+//     box.style.backgroundColor = '';
+//   });
+//   playerText.innerHTML = 'Tic Tac Toe';
+//   currentPlayer = HUMAN_PLAYER;
+// });
 
 restartBtn.addEventListener('click', () => {
   spaces.fill(null);
   boxes.forEach((box) => {
-    box.innerText = '';
+    box.innerHTML = ''; // Clear the box content (including the image)
     box.style.backgroundColor = '';
   });
   playerText.innerHTML = 'Tic Tac Toe';
   currentPlayer = HUMAN_PLAYER;
+
+  // Hide the winning line
+  hideWinningLine();
 });
+
+function hideWinningLine() {
+  const svg = document.getElementById('winningLine');
+  svg.style.display = 'none'; // Hide the SVG container
+}
 
 startGame();
