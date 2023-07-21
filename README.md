@@ -2,7 +2,7 @@
 
 ### Welcome to my game Tic Tac Toe!
 
-Click ⬇ to START!<br>
+Click ⬇ to START!<br><br>
 <a href="https://melo-boba-toe.surge.sh/"><img src="assets/melo-boba-toe-sample.png" width="100" height="100"></a>
 
 ## Key Features
