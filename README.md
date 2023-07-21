@@ -25,7 +25,7 @@ Click ⬇ to START!</br>
 
 ## Built With
 
-Javascript, Html, SCC.
+Javascript, Html, SCC, Python(Game in terminal only for python)
 
 ## Authors
 
