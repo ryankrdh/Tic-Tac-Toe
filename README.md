@@ -9,7 +9,8 @@ Click ⬇ to START!<br><br>
 Created a Tic Tac Toe game using JavaScript, showcasing proficiency in front-end web development and problem-solving skills. The game allows you to play against an AI to take turns marking X and O on a 3x3 grid until one player wins or the game ends in a draw. Implemented logic to validate moves, check for win conditions, and handle game outcomes. Demonstrated understanding of HTML, CSS, and JavaScript to build an interactive and user-friendly gaming experience. Utilized object-oriented programming principles to structure the code and maintain modularity.
 
 ## Key Features:
-* **JavaScript Mastery:** The project showcases my expertise in JavaScript, employing modern ES6+ features and understanding behind-the-scenes concepts like the event loop, hoisting, and scoping. <br>
+* **JavaScript Mastery:** The project showcases my expertise in JavaScript, employing modern ES6+ features and understanding behind-the-scenes concepts like the event loop, hoisting, and scoping. &nbsp; 
+  
 * **Game Logic:** I have implemented the complete game logic, allowing players to interact with the command-line interface and enjoy seamless gameplay against the AI. <br>
 * **AI using Minimax Algorithm:** The AI player is powered by the powerful Minimax algorithm, ensuring challenging gameplay and intelligent moves by the AI opponent. <br>
 * **User Interaction:** The command-line interface provides an intuitive experience for players to make their moves and witness the AI's moves in real-time. <br>
